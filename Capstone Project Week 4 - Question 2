@@ -1,0 +1,10 @@
+This project requires the following data:
+- Location data of Mexico City. This will be used to orient the first map in Folium
+- The boroughs that make up the city. This will be scraped from Wikipedia
+- Location data for each borough. This will be pulled from Geolocator
+- List of results from the foursquare app. The term “restaurants” will be searched in each borough, and then mapped to Mexico City. 
+    ::For example, if I search “restaurants” in the center of Mexico City, I will get a list of 50 of the most popular places close to that location. This will     
+     include the name, restaurant type, and exact location of the restaurant. Foursquare provides this information in the form of a JSON, which I will convert to a      pandas data frame.
+- KMeans cluster of Restaurant Locations to find similar areas to invest in.
+
+One problem I have come across is Foursquare has a new limit on results, meaning only a maximum of 50 results can be returned per request. As such, I will do multiple requests from different locations across the city and link them together in a data frame.
